@@ -25,7 +25,7 @@ void main()
 
 	// Select proximity time register OR with command register(0x02 | 0x80)
 	// Ptime = 2.72 ms, max count = 1023(0xFF)
-	char config[2] = {2};
+	char config[2] = {0};
 	config[0] = 0x02 | 0x80;
 	config[1] = 0xFF;
 	write(file, config, 2);
